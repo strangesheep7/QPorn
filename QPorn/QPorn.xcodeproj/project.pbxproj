@@ -133,6 +133,9 @@
 		9DF919EE20638881008A1299 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF9198520638880008A1299 /* SVProgressHUD.m */; };
 		9DF919EF20638881008A1299 /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF9198720638880008A1299 /* SVRadialGradientLayer.m */; };
 		9DF919F620638881008A1299 /* ParseTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF9199620638880008A1299 /* ParseTool.m */; };
+		B07915C5223CDB4B00EBA62E /* PublicConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B07915C4223CDB4B00EBA62E /* PublicConfig.m */; };
+		B07915C9223CDCCC00EBA62E /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = B07915C8223CDCCC00EBA62E /* Utils.m */; };
+		B07915CD223CDE4E00EBA62E /* PublicServer.m in Sources */ = {isa = PBXBuildFile; fileRef = B07915CB223CDE4D00EBA62E /* PublicServer.m */; };
 		B0DB64EC22390CDC0061DAB4 /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = B0DB64E722390CDB0061DAB4 /* TFHppleElement.m */; };
 		B0DB64ED22390CDC0061DAB4 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = B0DB64E922390CDB0061DAB4 /* XPathQuery.m */; };
 		B0DB64EE22390CDC0061DAB4 /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = B0DB64EA22390CDC0061DAB4 /* TFHpple.m */; };
@@ -397,6 +400,16 @@
 		9DF9198720638880008A1299 /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVRadialGradientLayer.m; sourceTree = "<group>"; };
 		9DF9199520638880008A1299 /* ParseTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseTool.h; sourceTree = "<group>"; };
 		9DF9199620638880008A1299 /* ParseTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseTool.m; sourceTree = "<group>"; };
+		B07915C3223CDA3D00EBA62E /* PublicDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublicDefine.h; sourceTree = "<group>"; };
+		B07915C4223CDB4B00EBA62E /* PublicConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PublicConfig.m; sourceTree = "<group>"; };
+		B07915C6223CDB6B00EBA62E /* PublicConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublicConfig.h; sourceTree = "<group>"; };
+		B07915C7223CDCCC00EBA62E /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		B07915C8223CDCCC00EBA62E /* Utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
+		B07915CA223CDD0500EBA62E /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		B07915CB223CDE4D00EBA62E /* PublicServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicServer.m; sourceTree = "<group>"; };
+		B07915CC223CDE4E00EBA62E /* PublicServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicServer.h; sourceTree = "<group>"; };
+		B07915CE223CDF5100EBA62E /* PublicColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicColor.h; sourceTree = "<group>"; };
+		B07915CF223CDFE900EBA62E /* PublicSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicSize.h; sourceTree = "<group>"; };
 		B0DB64E622390CDB0061DAB4 /* TFHpple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHpple.h; sourceTree = "<group>"; };
 		B0DB64E722390CDB0061DAB4 /* TFHppleElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHppleElement.m; sourceTree = "<group>"; };
 		B0DB64E822390CDB0061DAB4 /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
@@ -424,14 +437,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9D31C1222066553A00BFD371 /* Home(首页) */ = {
+		9D31C1222066553A00BFD371 /* Video(视频) */ = {
 			isa = PBXGroup;
 			children = (
 				9DC13550206F66AA0032AAB4 /* HomePage */,
 				9D31C1232066556000BFD371 /* HomeController.h */,
 				9D31C1242066556000BFD371 /* HomeController.m */,
 			);
-			path = "Home(首页)";
+			path = "Video(视频)";
 			sourceTree = "<group>";
 		};
 		9D31C1262066566300BFD371 /* CTScrollTitleBar */ = {
@@ -459,6 +472,7 @@
 				9D31C13E2067892000BFD371 /* View */,
 				9D31C13B2067889900BFD371 /* SettingController.h */,
 				9D31C13C2067889900BFD371 /* SettingController.m */,
+				B07915D0223CE7AC00EBA62E /* PornVideoList */,
 			);
 			path = "Setting(设置)";
 			sourceTree = "<group>";
@@ -545,7 +559,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		9D7413CA20638EA70015990A /* Domain */ = {
+		9D7413CA20638EA70015990A /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				9D7413CB20638ED20015990A /* PornItem.h */,
@@ -559,7 +573,7 @@
 				9D31C170206A348700BFD371 /* ForumContent.h */,
 				9D31C171206A348700BFD371 /* ForumContent.m */,
 			);
-			path = Domain;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		9D7413D1206391B40015990A /* Service */ = {
@@ -716,15 +730,16 @@
 		9DF918C320638880008A1299 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				9D31C13A2067883500BFD371 /* Setting(设置) */,
-				9D31C166206A2C4600BFD371 /* Forum(论坛) */,
+				9D31C1222066553A00BFD371 /* Video(视频) */,
 				9D31C14220688BA500BFD371 /* Picture(图片) */,
-				9D31C1222066553A00BFD371 /* Home(首页) */,
+				9D31C166206A2C4600BFD371 /* Forum(论坛) */,
+				9D31C13A2067883500BFD371 /* Setting(设置) */,
 				9DC13559206F67330032AAB4 /* Base */,
 				9D7413D1206391B40015990A /* Service */,
-				9D7413CA20638EA70015990A /* Domain */,
+				9D7413CA20638EA70015990A /* Model */,
+				9D36396D2065E0EE004B1D86 /* Category */,
 				9DF918C420638880008A1299 /* Other */,
-				9DF9199420638880008A1299 /* Util */,
+				9DF9199420638880008A1299 /* Utils */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -732,10 +747,10 @@
 		9DF918C420638880008A1299 /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				9D36396D2065E0EE004B1D86 /* Category */,
 				9DF918C520638880008A1299 /* AppDelegate.h */,
 				9DF918C620638880008A1299 /* AppDelegate.m */,
 				9DF918C720638880008A1299 /* main.m */,
+				B07915CA223CDD0500EBA62E /* PrefixHeader.pch */,
 				9DF918CB20638880008A1299 /* ThirdPart */,
 			);
 			path = Other;
@@ -1091,9 +1106,12 @@
 			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
-		9DF9199420638880008A1299 /* Util */ = {
+		9DF9199420638880008A1299 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				B07915C2223CD9E100EBA62E /* Public */,
+				B07915C7223CDCCC00EBA62E /* Utils.h */,
+				B07915C8223CDCCC00EBA62E /* Utils.m */,
 				9DF9199520638880008A1299 /* ParseTool.h */,
 				9DF9199620638880008A1299 /* ParseTool.m */,
 				9D7413DA2064A0990015990A /* AddressHelper.h */,
@@ -1105,7 +1123,28 @@
 				B0DB64E822390CDB0061DAB4 /* XPathQuery.h */,
 				B0DB64E922390CDB0061DAB4 /* XPathQuery.m */,
 			);
-			path = Util;
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		B07915C2223CD9E100EBA62E /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				B07915C3223CDA3D00EBA62E /* PublicDefine.h */,
+				B07915C6223CDB6B00EBA62E /* PublicConfig.h */,
+				B07915C4223CDB4B00EBA62E /* PublicConfig.m */,
+				B07915CC223CDE4E00EBA62E /* PublicServer.h */,
+				B07915CB223CDE4D00EBA62E /* PublicServer.m */,
+				B07915CE223CDF5100EBA62E /* PublicColor.h */,
+				B07915CF223CDFE900EBA62E /* PublicSize.h */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		B07915D0223CE7AC00EBA62E /* PornVideoList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PornVideoList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1256,8 +1295,10 @@
 				9DF919B920638880008A1299 /* MASViewAttribute.m in Sources */,
 				9DF919C220638880008A1299 /* MBProgressHUD.m in Sources */,
 				9DF919CF20638880008A1299 /* MJRefreshGifHeader.m in Sources */,
+				B07915CD223CDE4E00EBA62E /* PublicServer.m in Sources */,
 				9D31C14B2068B37C00BFD371 /* MeiZiTuItem.m in Sources */,
 				9D31C175206A378E00BFD371 /* ForumContentController.m in Sources */,
+				B07915C9223CDCCC00EBA62E /* Utils.m in Sources */,
 				9DF919DB20638881008A1299 /* NSData+ImageContentType.m in Sources */,
 				9DF919E420638881008A1299 /* UIImage+GIF.m in Sources */,
 				9D31C1302066592C00BFD371 /* UIView+Frame.m in Sources */,
@@ -1283,6 +1324,7 @@
 				9DF919BC20638880008A1299 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				9DF919EE20638881008A1299 /* SVProgressHUD.m in Sources */,
 				9DF919CC20638880008A1299 /* MJRefreshBackGifFooter.m in Sources */,
+				B07915C5223CDB4B00EBA62E /* PublicConfig.m in Sources */,
 				9D31C1412067893E00BFD371 /* SettingCell.m in Sources */,
 				9DF919A820638880008A1299 /* UIImageView+AFNetworking.m in Sources */,
 				9DF919DA20638881008A1299 /* README.md in Sources */,
@@ -1458,6 +1500,8 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MAECTXJ42A;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PREFIX_HEADER = /Users/qgy/QPorn/QPorn/QPorn/Classes/Other/PrefixHeader.pch;
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = QPorn/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1476,6 +1520,8 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MAECTXJ42A;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PREFIX_HEADER = /Users/qgy/QPorn/QPorn/QPorn/Classes/Other/PrefixHeader.pch;
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = QPorn/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

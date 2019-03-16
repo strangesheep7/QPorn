@@ -31,6 +31,7 @@ static NSString * const SettingCellID = @"SettingCell";
                      ],
                    @[
                      @{@"title" : @"浏览历史", @"detail" : @"暂不可用"},
+                     @{@"title" : @"porn列表", @"detail" : @"从XX开始"},
                      ],
                    ];
     self.datas = datas.mutableCopy;
@@ -82,11 +83,25 @@ static NSString * const SettingCellID = @"SettingCell";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSInteger section = indexPath.section;
     NSInteger row = indexPath.row;
-    if (section == 0) {
-        if (row == 0) {
+    if (section == 0)
+    {
+        if (row == 0)
+        {
+            //设置视频url
             [self settingVideoUrl];
-        } else if (row == 1) {
+        }
+        else if (row == 1)
+        {
+            //设置论坛url
             [self settingForumUrl];
+        }
+    }
+    else if (section == 1)
+    {
+        if (row == 1)
+        {
+            //视频列表
+            [self toPornVideoList];
         }
     }
 }
@@ -139,6 +154,12 @@ static NSString * const SettingCellID = @"SettingCell";
     [self presentViewController:alertVC animated:YES completion:^{
         
     }];
+}
+
+//跳转到porn视频列表
+- (void)toPornVideoList
+{
+    
 }
 
 @end
