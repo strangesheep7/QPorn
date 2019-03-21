@@ -55,7 +55,7 @@
         rightSystemViewsWidth += systemAccessoryWidths[cell.accessoryType];
     }
     
-    if ([UIScreen mainScreen].scale >= 3 && [UIScreen mainScreen].bounds.size.width >= 414) {
+    if ([UIScreen mainScreen].scale >= 3 && SCREEN_WIDTH >= 414) {
         rightSystemViewsWidth += 4;
     }
     

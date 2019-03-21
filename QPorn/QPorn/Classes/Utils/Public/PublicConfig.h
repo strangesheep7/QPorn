@@ -18,5 +18,9 @@ UIKIT_EXTERN NSString *const kCompanyEMail;
 UIKIT_EXTERN NSString *const kAPPAlbumName;
 UIKIT_EXTERN NSString *const kAppleID;
 
+#pragma Cache
+
+UIKIT_EXTERN NSString *const FirstNumber;
+
 
 #endif /* PublicConfig_h */

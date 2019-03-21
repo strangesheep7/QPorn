@@ -99,9 +99,9 @@ static NSString * const CTPhotoBrowserViewCellID = @"CTPhotoBrowserViewCell";
     self.collectionView.frame = CGRectMake(0, 0, self.view.bounds.size.width + 20, self.view.bounds.size.height);
     CGFloat btnW = 90;
     CGFloat btnH = 32;
-    CGFloat btnY = [UIScreen mainScreen].bounds.size.height - btnH - 20 - iPhoneXBottomOffset;
+    CGFloat btnY = SCREEN_HEIGHT - btnH - 20 - iPhoneXBottomOffset;
     self.closeBtn.frame = CGRectMake(20, btnY, btnW, btnH);
-    CGFloat saveBtnX = [UIScreen mainScreen].bounds.size.width - btnW - 20;
+    CGFloat saveBtnX = SCREEN_WIDTH - btnW - 20;
     self.saveBtn.frame = CGRectMake(saveBtnX, btnY, btnW, btnH);
     
     // 4.设置两个按钮属性

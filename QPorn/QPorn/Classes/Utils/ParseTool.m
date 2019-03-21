@@ -166,6 +166,7 @@
     return tempArr;
 }
 
+//解析图片列表
 + (NSMutableArray *)parseMeiZiTu:(NSString *)html {
     NSError *error = nil;
     GDataXMLElement *doc = [[GDataXMLElement alloc] initWithHTMLString:html error:&error];
@@ -174,6 +175,10 @@
     NSMutableArray *tempArr = [NSMutableArray array];
     for (int i = 0; i < lis.count; i++) {
         GDataXMLElement *li = lis[i];
+        if (li.selectFirst(@"a") == nil) //容错，多余的box会导致闪退
+        {
+            continue;
+        }
         NSString *contentUrl = li.selectFirst(@"a").attribute(@"href");
         NSInteger index = [contentUrl rangeOfString:@"/" options:NSBackwardsSearch].location;
         NSString *idStr = @"";

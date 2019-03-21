@@ -42,4 +42,9 @@
 
 #define kOsdWaitTime 2
 
+#pragma mark - ThumbSize
+#define PornThumbWidth 120
+#define PornThumbHeight 90
+#define PornThumbRatio (12.0/9.0)
+
 #endif

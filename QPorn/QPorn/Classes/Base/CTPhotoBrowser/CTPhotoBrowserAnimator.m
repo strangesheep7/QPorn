@@ -91,7 +91,7 @@
     CGRect startRect = [self.presentDelegate startRect:currentIndex];
     if (CGRectEqualToRect(endRect, CGRectZero) && CGRectEqualToRect(startRect, CGRectZero)) { // 当endRect、startRect都为CGRectZero时，只做透明渐变
         
-        UIView *blackView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)];
+        UIView *blackView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
         blackView.backgroundColor = [UIColor blackColor];
         [blackView addSubview:imageView];
         [[transitionContext containerView] addSubview:blackView];

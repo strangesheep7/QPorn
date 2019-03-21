@@ -31,17 +31,17 @@
     CGRect calculateFrame = CGRectZero;
     if (image) {
         CGFloat x = 0;
-        CGFloat width = [UIScreen mainScreen].bounds.size.width;
+        CGFloat width = SCREEN_WIDTH;
         CGFloat height = width * image.size.height / image.size.width;
         
         CGFloat y = 0;
-        if (height > [UIScreen mainScreen].bounds.size.height) {
+        if (height > SCREEN_HEIGHT) {
             // 长图
             y = 0;
             self.scrollView.contentSize = CGSizeMake(0, height);
         } else {
             // 非长图
-            y = ([UIScreen mainScreen].bounds.size.height - height) * 0.5;
+            y = (SCREEN_HEIGHT - height) * 0.5;
             self.scrollView.contentSize = CGSizeMake(0, 0);
         }
         
@@ -66,17 +66,17 @@
         CGRect calculateFrame = CGRectZero;
         if (image) {
             CGFloat x = 0;
-            CGFloat width = [UIScreen mainScreen].bounds.size.width;
+            CGFloat width = SCREEN_WIDTH;
             CGFloat height = width * image.size.height / image.size.width;
             
             CGFloat y = 0;
-            if (height > [UIScreen mainScreen].bounds.size.height) {
+            if (height > SCREEN_HEIGHT) {
                 // 长图
                 y = 0;
                 self.scrollView.contentSize = CGSizeMake(0, height);
             } else {
                 // 非长图
-                y = ([UIScreen mainScreen].bounds.size.height - height) * 0.5;
+                y = (SCREEN_HEIGHT - height) * 0.5;
                 self.scrollView.contentSize = CGSizeMake(0, 0);
             }
             

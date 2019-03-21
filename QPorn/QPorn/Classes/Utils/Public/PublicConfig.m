@@ -13,3 +13,7 @@ NSString *const kCompanyWebsitURL   =    @"";
 NSString *const kCompanyEMail       =    @"";
 NSString *const kAPPAlbumName       =    @"QPorn";
 NSString *const kAppleID            =    @"";
+
+#pragma Cache
+
+NSString *const FirstNumber         =    @"FirstNumber";

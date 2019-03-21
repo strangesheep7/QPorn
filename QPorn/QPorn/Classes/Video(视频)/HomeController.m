@@ -34,12 +34,10 @@
     barView.lazyLoad = YES;
     [self.view addSubview:barView];
     self.barView = barView;
-    CGFloat screenW = [UIScreen mainScreen].bounds.size.width;
-    CGFloat screenH = [UIScreen mainScreen].bounds.size.height;
     CGFloat navH = self.navigationController.navigationBar.bounds.size.height;
     CGFloat statusH = [UIApplication sharedApplication].statusBarFrame.size.height;
     CGFloat tabBarH = ((UITabBarController *)[UIApplication sharedApplication].keyWindow.rootViewController).tabBar.frame.size.height;
-    barView.frame = CGRectMake(0, 0, screenW, screenH - navH - statusH - tabBarH);
+    barView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - navH - statusH - tabBarH);
 }
 
 #pragma mark - childView

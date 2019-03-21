@@ -29,6 +29,8 @@ static NSString * const PictureCellID = @"PictureCell";
 #pragma mark - life cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.page = 1;
+    self.datas = [NSMutableArray array];
     [self setupUI];
     [self setupRefresh];
 }
@@ -45,25 +47,14 @@ static NSString * const PictureCellID = @"PictureCell";
 
 #pragma mark - data
 - (void)loadData {
-    [[ApiService shareInstance] requestMeiZiTu:self.type page:1 success:^(NSMutableArray<MeiZiTuItem *> *datas) {
-        self.datas = datas;
-        self.page = 1;
+    [[ApiService shareInstance] requestMeiZiTu:self.type page:self.page success:^(NSMutableArray<MeiZiTuItem *> *datas) {
+        [self.datas addObjectsFromArray:datas];
+        self.page++;
         [self.collectionView reloadData];
         [self.collectionView.mj_header endRefreshing];
         self.collectionView.mj_footer.hidden = NO;
     } fail:^(NSString *msg) {
         [self.collectionView.mj_header endRefreshing];
-    }];
-}
-
-- (void)loadMoreData {
-    [[ApiService shareInstance] requestMeiZiTu:self.type page:self.page+1 success:^(NSMutableArray<MeiZiTuItem *> *datas) {
-        [self.datas addObjectsFromArray:datas];
-        self.page += 1;
-        [self.collectionView reloadData];
-        [self.collectionView.mj_footer endRefreshing];
-    } fail:^(NSString *msg) {
-        [self.collectionView.mj_footer endRefreshing];
     }];
 }
 
@@ -98,7 +89,7 @@ static NSString * const PictureCellID = @"PictureCell";
     
     
     self.collectionView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
-        [weakSelf loadMoreData];
+        [weakSelf loadData];
     }];
     
     self.collectionView.mj_footer.hidden = YES;

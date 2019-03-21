@@ -53,9 +53,7 @@ static NSString * const ForumCellID = @"ForumCell";
     [tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.top.right.bottom.equalTo(self.view);
     }];
-    CGFloat sw = [UIScreen mainScreen].bounds.size.width;
-    CGFloat sh = [UIScreen mainScreen].bounds.size.height;
-    tableView.frame = CGRectMake(0, 0, sw, sh);
+    tableView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
     tableView.dataSource = self;
     tableView.delegate = self;
     [tableView registerClass:[ForumCell class] forCellReuseIdentifier:ForumCellID];
