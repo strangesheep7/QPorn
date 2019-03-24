@@ -22,5 +22,6 @@
 + (NSMutableArray *)parseForumOther:(NSString *)html;
 //MaoMi
 + (NSMutableArray *)parseMaoMiList:(NSString *)html;
++ (NSMutableArray *)parseMaoMiVideo:(NSString *)html;
 
 @end

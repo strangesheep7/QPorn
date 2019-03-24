@@ -6,6 +6,8 @@
 //  Copyright © 2018年 qgy. All rights reserved.
 //
 
+#define MaoMiBaseUrl @"https://www.612ii.com"
+
 #import "ApiService.h"
 #import "AFNetworking.h"
 #import "ParseTool.h"
@@ -14,6 +16,7 @@
 #import "AddressHelper.h"
 #import "MeiZiTuItem.h"
 #import "MaoMiPornItem.h"
+#import "MaoMiVideoItem.h"
 
 @implementation ApiService
 
@@ -270,10 +273,10 @@ static ApiService *apiService = nil;
     AFHTTPSessionManager *manager = [self manager];
     
     AFHTTPRequestSerializer *req = manager.requestSerializer;
-    [req setValue:@"http:/www.612ii.com/" forHTTPHeaderField:@"Referer"];
+    [req setValue:MaoMiBaseUrl forHTTPHeaderField:@"Referer"];
 //    [req setValue:@"mei_zi_tu_domain_name" forHTTPHeaderField:@"Domain-Name"];
     
-    NSString *url = @"https://www.612ii.com/shipin/";
+    NSString *url = [NSString stringWithFormat:@"%@/%@",MaoMiBaseUrl,@"shipin/"];
     NSString *path = nil;
     if (type.length)
     {
@@ -286,6 +289,34 @@ static ApiService *apiService = nil;
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSString *res = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
         NSMutableArray<MaoMiPornItem *> *datas = [ParseTool parseMaoMiList:res];
+        success(datas);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"%@", error);
+        fail(@"failed");
+    }];
+}
+
+//maomi单个视频
+- (void)requestMaoMiWithId:(NSString *)idStr success:(void (^)(NSMutableArray<MaoMiVideoItem *> *datas))success fail:(void (^)(NSString *msg))fail
+{
+    AFHTTPSessionManager *manager = [self manager];
+    
+    AFHTTPRequestSerializer *req = manager.requestSerializer;
+    [req setValue:MaoMiBaseUrl forHTTPHeaderField:@"Referer"];
+    //    [req setValue:@"mei_zi_tu_domain_name" forHTTPHeaderField:@"Domain-Name"];
+    
+    NSString *path = MaoMiBaseUrl;
+    if (idStr.length)
+    {
+        path = [NSString stringWithFormat:@"%@%@", MaoMiBaseUrl, idStr];
+    }
+    path =  [path stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    
+    [manager GET:path parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSString *res = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+        NSMutableArray<MaoMiVideoItem *> *datas = [ParseTool parseMaoMiVideo:res];
         success(datas);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"%@", error);

@@ -1,37 +1,48 @@
 //
-//  MaoMiPageController.m
+//  PornVideoListController.m
 //  QPorn
 //
 //  Created by qgy on 2019/3/24.
 //  Copyright © 2019年 test. All rights reserved.
 //
 
-#import "MaoMiPageController.h"
+#import "PornVideoListController.h"
 #import "Masonry.h"
-#import "MaoMiPornCell.h"
+#import "PornVideoCell.h"
 #import "MJRefresh.h"
 #import "ApiService.h"
-#import "MaoMiPornItem.h"
+#import "PornVideoItem.h"
 #import "CTPhotoBrowserController.h"
-#import "MaoMiVideoController.h"
 
-static NSString * const MaoMiPornCellID = @"MaoMiPornCell";
+static NSString * const PornVideoCellID = @"PornVideoCell";
 
-@interface MaoMiPageController () <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface PornVideoListController () <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (nonatomic, weak) UICollectionView *collectionView;
 @property (nonatomic, weak) UICollectionViewFlowLayout *layout;
 @property (nonatomic, strong) NSMutableArray *datas;
-@property (nonatomic, assign) NSInteger page;
 
 @end
 
-@implementation MaoMiPageController
+@implementation PornVideoListController
+
+- (instancetype)init
+{
+    if (self = [super init])
+    {
+        self.hidesBottomBarWhenPushed = YES;
+    }
+    return self;
+}
 
 #pragma mark - life cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.page = 1;
+    if (self.currentPage == 0) //如果没有给个默认值
+    {
+        self.currentPage = 27000;
+    }
+    
     self.datas = [NSMutableArray array];
     [self setupUI];
     [self setupRefresh];
@@ -50,15 +61,14 @@ static NSString * const MaoMiPornCellID = @"MaoMiPornCell";
 #pragma mark - data
 - (void)loadData
 {
-    [[ApiService shareInstance] requestMaoMiWithType:self.type page:self.page success:^(NSMutableArray<ForumItem *> *datas) {
-        [self.datas addObjectsFromArray:datas];
-        self.page++;
-        [self.collectionView reloadData];
-        [self.collectionView.mj_header endRefreshing];
-        self.collectionView.mj_footer.hidden = NO;
-    } fail:^(NSString *msg) {
-        [self.collectionView.mj_header endRefreshing];
-    }];
+    NSMutableArray *tempArray = [NSMutableArray array];
+    for (int i = 0; i < 20; i++)
+    {
+        NSInteger index = self.currentPage + i;
+        [tempArray addObject:[NSNumber numberWithInteger:index]];
+    }
+    
+    [self.datas addObjectsFromArray:tempArray];
 }
 
 #pragma mark - UI
@@ -75,7 +85,7 @@ static NSString * const MaoMiPornCellID = @"MaoMiPornCell";
     }];
     collectionView.dataSource = self;
     collectionView.delegate = self;
-    [collectionView registerClass:[MaoMiPornCell class] forCellWithReuseIdentifier:MaoMiPornCellID];
+    [collectionView registerClass:[PornVideoCell class] forCellWithReuseIdentifier:PornVideoCellID];
     collectionView.backgroundColor = [UIColor whiteColor];
 }
 
@@ -109,20 +119,14 @@ static NSString * const MaoMiPornCellID = @"MaoMiPornCell";
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    MaoMiPornCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:MaoMiPornCellID forIndexPath:indexPath];
+    PornVideoCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:PornVideoCellID forIndexPath:indexPath];
     cell.item = self.datas[indexPath.item];
     return cell;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    MaoMiPornItem *item = self.datas[indexPath.item];
+    PornVideoItem *item = self.datas[indexPath.item];
     
-    MaoMiVideoController *vc = [[MaoMiVideoController alloc] init];
-    vc.item = item;
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
-    [self presentViewController:nav animated:YES completion:^{
-        
-    }];
 }
 
 @end

@@ -12,6 +12,7 @@
 #import "AddressHelper.h"
 #import "SVProgressHUD.h"
 #import "ApiService.h"
+#import "PornVideoListController.h"
 
 static NSString * const SettingCellID = @"SettingCell";
 
@@ -161,7 +162,8 @@ static NSString * const SettingCellID = @"SettingCell";
 //跳转到porn视频列表
 - (void)toPornVideoList
 {
-    
+    PornVideoListController *vc = [[PornVideoListController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

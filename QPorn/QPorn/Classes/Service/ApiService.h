@@ -13,6 +13,7 @@
 @class ForumItem;
 @class ForumContent;
 @class MaoMiPornItem;
+@class MaoMiVideoItem;
 
 @interface ApiService : NSObject
 
@@ -37,5 +38,7 @@
 
 //maomi视频
 - (void)requestMaoMiWithType:(NSString *)type page:(NSInteger)page success:(void (^)(NSMutableArray<MaoMiPornItem *> *datas))success fail:(void (^)(NSString *msg))fail;
+//maomi单个视频
+- (void)requestMaoMiWithId:(NSString *)idStr success:(void (^)(NSMutableArray<MaoMiVideoItem *> *datas))success fail:(void (^)(NSString *msg))fail;
 
 @end

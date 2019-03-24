@@ -136,11 +136,15 @@
 		B07915C5223CDB4B00EBA62E /* PublicConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B07915C4223CDB4B00EBA62E /* PublicConfig.m */; };
 		B07915C9223CDCCC00EBA62E /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = B07915C8223CDCCC00EBA62E /* Utils.m */; };
 		B07915CD223CDE4E00EBA62E /* PublicServer.m in Sources */ = {isa = PBXBuildFile; fileRef = B07915CB223CDE4D00EBA62E /* PublicServer.m */; };
-		B09E7D062243E46C00BB2625 /* PornVideoListController.m in Sources */ = {isa = PBXBuildFile; fileRef = B09E7D052243E46C00BB2625 /* PornVideoListController.m */; };
 		B09CB7E9224763770087DF91 /* MaoMiController.m in Sources */ = {isa = PBXBuildFile; fileRef = B09CB7E8224763770087DF91 /* MaoMiController.m */; };
 		B09CB7EC224765020087DF91 /* MaoMiPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = B09CB7EB224765020087DF91 /* MaoMiPageController.m */; };
 		B09CB7F0224768120087DF91 /* MaoMiPornItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B09CB7EF224768120087DF91 /* MaoMiPornItem.m */; };
 		B09CB7F4224768BE0087DF91 /* MaoMiPornCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B09CB7F3224768BE0087DF91 /* MaoMiPornCell.m */; };
+		B09E7D0B2247BC8D00BB2625 /* PornVideoListController.m in Sources */ = {isa = PBXBuildFile; fileRef = B09E7D0A2247BC8D00BB2625 /* PornVideoListController.m */; };
+		B09E7D0E2247BF8F00BB2625 /* MaoMiVideoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B09E7D0D2247BF8F00BB2625 /* MaoMiVideoItem.m */; };
+		B09E7D112247C0E600BB2625 /* MaoMiVideoController.m in Sources */ = {isa = PBXBuildFile; fileRef = B09E7D102247C0E600BB2625 /* MaoMiVideoController.m */; };
+		B09E7D152247C6DB00BB2625 /* PornVideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B09E7D142247C6DB00BB2625 /* PornVideoCell.m */; };
+		B09E7D182247C81400BB2625 /* PornVideoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B09E7D172247C81400BB2625 /* PornVideoItem.m */; };
 		B0DB64EC22390CDC0061DAB4 /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = B0DB64E722390CDB0061DAB4 /* TFHppleElement.m */; };
 		B0DB64ED22390CDC0061DAB4 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = B0DB64E922390CDB0061DAB4 /* XPathQuery.m */; };
 		B0DB64EE22390CDC0061DAB4 /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = B0DB64EA22390CDC0061DAB4 /* TFHpple.m */; };
@@ -415,8 +419,6 @@
 		B07915CC223CDE4E00EBA62E /* PublicServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicServer.h; sourceTree = "<group>"; };
 		B07915CE223CDF5100EBA62E /* PublicColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicColor.h; sourceTree = "<group>"; };
 		B07915CF223CDFE900EBA62E /* PublicSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicSize.h; sourceTree = "<group>"; };
-		B09E7D042243E46C00BB2625 /* PornVideoListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PornVideoListController.h; path = "../../../../../../Desktop/学习/MyCode/SwiftTest/PornVideoListController.h"; sourceTree = "<group>"; };
-		B09E7D052243E46C00BB2625 /* PornVideoListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PornVideoListController.m; path = "../../../../../../Desktop/学习/MyCode/SwiftTest/PornVideoListController.m"; sourceTree = "<group>"; };
 		B09CB7E7224763770087DF91 /* MaoMiController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaoMiController.h; sourceTree = "<group>"; };
 		B09CB7E8224763770087DF91 /* MaoMiController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaoMiController.m; sourceTree = "<group>"; };
 		B09CB7EA224765020087DF91 /* MaoMiPageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaoMiPageController.h; sourceTree = "<group>"; };
@@ -425,6 +427,16 @@
 		B09CB7EF224768120087DF91 /* MaoMiPornItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaoMiPornItem.m; sourceTree = "<group>"; };
 		B09CB7F2224768BE0087DF91 /* MaoMiPornCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaoMiPornCell.h; sourceTree = "<group>"; };
 		B09CB7F3224768BE0087DF91 /* MaoMiPornCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaoMiPornCell.m; sourceTree = "<group>"; };
+		B09E7D092247BC8D00BB2625 /* PornVideoListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PornVideoListController.h; sourceTree = "<group>"; };
+		B09E7D0A2247BC8D00BB2625 /* PornVideoListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PornVideoListController.m; sourceTree = "<group>"; };
+		B09E7D0C2247BF8F00BB2625 /* MaoMiVideoItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaoMiVideoItem.h; sourceTree = "<group>"; };
+		B09E7D0D2247BF8F00BB2625 /* MaoMiVideoItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaoMiVideoItem.m; sourceTree = "<group>"; };
+		B09E7D0F2247C0E600BB2625 /* MaoMiVideoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaoMiVideoController.h; sourceTree = "<group>"; };
+		B09E7D102247C0E600BB2625 /* MaoMiVideoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaoMiVideoController.m; sourceTree = "<group>"; };
+		B09E7D132247C6DB00BB2625 /* PornVideoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PornVideoCell.h; sourceTree = "<group>"; };
+		B09E7D142247C6DB00BB2625 /* PornVideoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PornVideoCell.m; sourceTree = "<group>"; };
+		B09E7D162247C81400BB2625 /* PornVideoItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PornVideoItem.h; sourceTree = "<group>"; };
+		B09E7D172247C81400BB2625 /* PornVideoItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PornVideoItem.m; sourceTree = "<group>"; };
 		B0DB64E622390CDB0061DAB4 /* TFHpple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHpple.h; sourceTree = "<group>"; };
 		B0DB64E722390CDB0061DAB4 /* TFHppleElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHppleElement.m; sourceTree = "<group>"; };
 		B0DB64E822390CDB0061DAB4 /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
@@ -484,10 +496,10 @@
 		9D31C13A2067883500BFD371 /* Setting(设置) */ = {
 			isa = PBXGroup;
 			children = (
+				B09E7D082247BC7B00BB2625 /* PornVideoList */,
 				9D31C13E2067892000BFD371 /* View */,
 				9D31C13B2067889900BFD371 /* SettingController.h */,
 				9D31C13C2067889900BFD371 /* SettingController.m */,
-				B09E7D032243E3CD00BB2625 /* PornVideoList */,
 			);
 			path = "Setting(设置)";
 			sourceTree = "<group>";
@@ -588,6 +600,8 @@
 				9D31C16E206A2DF200BFD371 /* ForumItem.m */,
 				9D31C170206A348700BFD371 /* ForumContent.h */,
 				9D31C171206A348700BFD371 /* ForumContent.m */,
+				B09E7D162247C81400BB2625 /* PornVideoItem.h */,
+				B09E7D172247C81400BB2625 /* PornVideoItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1165,6 +1179,8 @@
 				B09CB7E8224763770087DF91 /* MaoMiController.m */,
 				B09CB7EA224765020087DF91 /* MaoMiPageController.h */,
 				B09CB7EB224765020087DF91 /* MaoMiPageController.m */,
+				B09E7D0F2247C0E600BB2625 /* MaoMiVideoController.h */,
+				B09E7D102247C0E600BB2625 /* MaoMiVideoController.m */,
 			);
 			path = MaoMi;
 			sourceTree = "<group>";
@@ -1174,6 +1190,8 @@
 			children = (
 				B09CB7EE224768120087DF91 /* MaoMiPornItem.h */,
 				B09CB7EF224768120087DF91 /* MaoMiPornItem.m */,
+				B09E7D0C2247BF8F00BB2625 /* MaoMiVideoItem.h */,
+				B09E7D0D2247BF8F00BB2625 /* MaoMiVideoItem.m */,
 			);
 			path = MaoMiItem;
 			sourceTree = "<group>";
@@ -1187,13 +1205,23 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		B09E7D032243E3CD00BB2625 /* PornVideoList */ = {
+		B09E7D082247BC7B00BB2625 /* PornVideoList */ = {
 			isa = PBXGroup;
 			children = (
-				B09E7D042243E46C00BB2625 /* PornVideoListController.h */,
-				B09E7D052243E46C00BB2625 /* PornVideoListController.m */,
+				B09E7D122247C68C00BB2625 /* View */,
+				B09E7D092247BC8D00BB2625 /* PornVideoListController.h */,
+				B09E7D0A2247BC8D00BB2625 /* PornVideoListController.m */,
 			);
 			path = PornVideoList;
+			sourceTree = "<group>";
+		};
+		B09E7D122247C68C00BB2625 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B09E7D132247C6DB00BB2625 /* PornVideoCell.h */,
+				B09E7D142247C6DB00BB2625 /* PornVideoCell.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1332,8 +1360,10 @@
 				9D31C13D2067889900BFD371 /* SettingController.m in Sources */,
 				9DF919E320638881008A1299 /* UIButton+WebCache.m in Sources */,
 				9DF919AD20638880008A1299 /* README.markdown in Sources */,
+				B09E7D112247C0E600BB2625 /* MaoMiVideoController.m in Sources */,
 				9D31C15E2068D60600BFD371 /* PictureController.m in Sources */,
 				9DF919A920638880008A1299 /* UIProgressView+AFNetworking.m in Sources */,
+				B09E7D182247C81400BB2625 /* PornVideoItem.m in Sources */,
 				9DF919E620638881008A1299 /* UIImageView+HighlightedWebCache.m in Sources */,
 				9DF9199B20638880008A1299 /* AFHTTPSessionManager.m in Sources */,
 				9DF919AE20638880008A1299 /* FMDatabase.m in Sources */,
@@ -1371,17 +1401,18 @@
 				9DF919D120638880008A1299 /* MJRefreshStateHeader.m in Sources */,
 				9DF919BE20638880008A1299 /* ViewController+MASAdditions.m in Sources */,
 				9D31C16C206A2C8700BFD371 /* ForumCell.m in Sources */,
+				B09E7D0B2247BC8D00BB2625 /* PornVideoListController.m in Sources */,
 				9DF919D520638881008A1299 /* UIScrollView+MJExtension.m in Sources */,
 				9DF919DF20638881008A1299 /* SDWebImageDownloader.m in Sources */,
 				B0DB64EC22390CDC0061DAB4 /* TFHppleElement.m in Sources */,
 				9DF919BC20638880008A1299 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				B09E7D152247C6DB00BB2625 /* PornVideoCell.m in Sources */,
 				9DF919EE20638881008A1299 /* SVProgressHUD.m in Sources */,
 				9DF919CC20638880008A1299 /* MJRefreshBackGifFooter.m in Sources */,
 				B07915C5223CDB4B00EBA62E /* PublicConfig.m in Sources */,
 				9D31C1412067893E00BFD371 /* SettingCell.m in Sources */,
 				9DF919A820638880008A1299 /* UIImageView+AFNetworking.m in Sources */,
 				9DF919DA20638881008A1299 /* README.md in Sources */,
-				B09E7D062243E46C00BB2625 /* PornVideoListController.m in Sources */,
 				9DF919B820638880008A1299 /* MASLayoutConstraint.m in Sources */,
 				9DF919A020638880008A1299 /* AFURLSessionManager.m in Sources */,
 				9DF919CD20638880008A1299 /* MJRefreshBackNormalFooter.m in Sources */,
@@ -1403,6 +1434,7 @@
 				9DF919EB20638881008A1299 /* SVIndefiniteAnimatedView.m in Sources */,
 				9DF919E120638881008A1299 /* SDWebImageManager.m in Sources */,
 				9DF919E720638881008A1299 /* UIImageView+WebCache.m in Sources */,
+				B09E7D0E2247BF8F00BB2625 /* MaoMiVideoItem.m in Sources */,
 				9DF919CB20638880008A1299 /* MJRefreshAutoStateFooter.m in Sources */,
 				9DF919D420638881008A1299 /* NSBundle+MJRefresh.m in Sources */,
 				9DF9199C20638880008A1299 /* AFNetworkReachabilityManager.m in Sources */,
