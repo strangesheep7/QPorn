@@ -13,6 +13,7 @@
 #import "VideoResult.h"
 #import "AddressHelper.h"
 #import "MeiZiTuItem.h"
+#import "MaoMiPornItem.h"
 
 @implementation ApiService
 
@@ -255,6 +256,36 @@ static ApiService *apiService = nil;
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSString *res = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
         NSMutableArray<ForumItem *> *datas = [ParseTool parseForumOther:res];
+        success(datas);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"%@", error);
+        fail(@"failed");
+    }];
+}
+
+#pragma mark - MaoMi
+//maomi视频
+- (void)requestMaoMiWithType:(NSString *)type page:(NSInteger)page success:(void (^)(NSMutableArray<MaoMiPornItem *> *datas))success fail:(void (^)(NSString *msg))fail
+{
+    AFHTTPSessionManager *manager = [self manager];
+    
+    AFHTTPRequestSerializer *req = manager.requestSerializer;
+    [req setValue:@"http:/www.612ii.com/" forHTTPHeaderField:@"Referer"];
+//    [req setValue:@"mei_zi_tu_domain_name" forHTTPHeaderField:@"Domain-Name"];
+    
+    NSString *url = @"https://www.612ii.com/shipin/";
+    NSString *path = nil;
+    if (type.length)
+    {
+        path = [NSString stringWithFormat:@"%@%@-%ld.html", url,type, page];
+    }
+    path =  [path stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    
+    [manager GET:path parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSString *res = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+        NSMutableArray<MaoMiPornItem *> *datas = [ParseTool parseMaoMiList:res];
         success(datas);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"%@", error);

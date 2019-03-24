@@ -12,6 +12,7 @@
 #import "SettingController.h"
 #import "PictureController.h"
 #import "ForumController.h"
+#import "MaoMiController.h"
 
 @interface TabBarController ()
 
@@ -31,8 +32,10 @@
     [self setUpOneChildVC:home];
     PictureController *picture = [[PictureController alloc] init];
     [self setUpOneChildVC:picture];
-    ForumController *forum = [[ForumController alloc] init];
-    [self setUpOneChildVC:forum];
+//    ForumController *forum = [[ForumController alloc] init];
+//    [self setUpOneChildVC:forum];
+    MaoMiController *maomi = [[MaoMiController alloc] init];
+    [self setUpOneChildVC:maomi];
     SettingController *setting = [[SettingController alloc] init];
     [self setUpOneChildVC:setting];
 }

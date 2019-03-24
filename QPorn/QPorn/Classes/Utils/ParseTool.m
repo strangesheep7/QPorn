@@ -15,6 +15,7 @@
 #import "ForumItem.h"
 #import "ForumContent.h"
 #import "AddressHelper.h"
+#import "MaoMiPornItem.h"
 
 @implementation ParseTool
 
@@ -424,6 +425,32 @@
         str = [str stringByReplacingCharactersInRange:range withString:@" "];
     }
     return str;
+}
+
++ (NSMutableArray *)parseMaoMiList:(NSString *)html
+{
+    NSError *error = nil;
+    GDataXMLElement *doc = [[GDataXMLElement alloc] initWithHTMLString:html error:&error];
+    NSArray<GDataXMLElement *> *tds = [doc nodesForXPath:@"//li[@class='shown']" error:&error];
+    NSMutableArray *tempArr = [NSMutableArray array];
+    for (int i = 0; i < tds.count; i++) {
+        GDataXMLElement *td = tds[i];
+        NSArray *elements = td.select(@"a");
+        NSString *aTitle = td.selectFirst(@"a").attribute(@"title");
+        for (int i = 0; i < elements.count; i++) {
+            GDataXMLElement *element = elements[i];
+            
+            NSString *contentUrl = element.attribute(@"href");
+            NSString *thumbUrl = element.selectFirst(@"img").attribute(@"src");
+            
+            MaoMiPornItem *item = [[MaoMiPornItem alloc] init];
+            item.Id = contentUrl;
+            item.name = aTitle;
+            item.thumbUrl = thumbUrl;
+            [tempArr addObject:item];
+        }
+    }
+    return tempArr;
 }
 
 @end

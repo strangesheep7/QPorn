@@ -11,6 +11,8 @@
 #import "SettingCell.h"
 #import "AddressHelper.h"
 #import "SVProgressHUD.h"
+#import "ApiService.h"
+
 static NSString * const SettingCellID = @"SettingCell";
 
 @interface SettingController () <UITableViewDataSource, UITableViewDelegate>
